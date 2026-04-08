@@ -1,19 +1,14 @@
-import LoginPage from '../support/pageObjects/LoginPage'
+// import LoginPage from '../support/pageObjects/LoginPage'
 import InventoryPage from '../support/pageObjects/InventoryPage'
 import CheckoutPage from '../support/pageObjects/CheckoutPage'
 
 describe('Checkout Tests', () => {
 
   beforeEach(() => {
-    cy.fixture('users').then(user => {
-      LoginPage.visit()
-      LoginPage.enterUsername(user.validUser.username)
-      LoginPage.enterPassword(user.validUser.password)
-      LoginPage.clickLogin()
-
-      cy.url().should('include', '/inventory')
-    })
+  cy.fixture('users').then(user => {
+    cy.login(user.validUser.username, user.validUser.password)
   })
+})
 
   it('TC_004 - Complete checkout successfully', () => {
     InventoryPage.addFirstItemToCart()
