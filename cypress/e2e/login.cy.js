@@ -6,7 +6,7 @@ describe('Login Tests', () => {
     LoginPage.visit()
   })
 
-  it('Login with valid credentials', () => {
+  it('TC_001 - Login with valid credentials', () => {
     cy.fixture('users').then(user => {
       LoginPage.enterUsername(user.validUser.username)
       LoginPage.enterPassword(user.validUser.password)
@@ -16,7 +16,7 @@ describe('Login Tests', () => {
     })
   })
 
-  it('Login with invalid credentials', () => {
+  it('TC_002 — Login with invalid credentials', () => {
     cy.fixture('users').then(user => {
       LoginPage.enterUsername(user.invalidUser.username)
       LoginPage.enterPassword(user.invalidUser.password)
