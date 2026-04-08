@@ -11,16 +11,26 @@ describe('Checkout Tests', () => {
 })
 
   it('TC_004 - Complete checkout successfully', () => {
-    InventoryPage.addFirstItemToCart()
-    InventoryPage.goToCart()
 
-    CheckoutPage.clickCheckout()
-    CheckoutPage.fillInformation('John', 'Doe', '12345')
-    CheckoutPage.continue()
-    CheckoutPage.finish()
+  cy.login('standard_user', 'secret_sauce')
 
-    CheckoutPage.successMessage().should('contain', 'Thank you')
-  })
+  cy.get('.inventory_item button').first().click()
+  cy.get('.shopping_cart_link').click()
+
+  cy.get('[data-test="checkout"]').click()
+
+  cy.get('[data-test="firstName"]').type('John')
+  cy.get('[data-test="lastName"]').type('Doe')
+  cy.get('[data-test="postalCode"]').type('12345')
+
+  cy.get('[data-test="continue"]').click()
+
+  cy.url().should('include', 'checkout-step-two')
+
+  cy.get('[data-test="finish"]').click()
+
+  cy.get('.complete-header').should('contain', 'Thank you')
+})
 
   it('TC_005 - Checkout should fail with empty fields', () => {
     InventoryPage.addFirstItemToCart()
