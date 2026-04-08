@@ -8,9 +8,9 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4   
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true 
 
-      - name: Run Cypress tests
-        uses: cypress-io/github-action@v6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cypress-io/github-action@v6
