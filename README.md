@@ -24,7 +24,7 @@ The goal is to showcase expertise in test case design, automation, reporting, an
 
 ---
 
-## 📂 Project Structure
+## 📂 Project Structure ✔
 
 cypress/
 ├── e2e/           # Test specifications
