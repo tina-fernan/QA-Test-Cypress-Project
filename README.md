@@ -3,18 +3,24 @@
 ## 📌 Project Overview
 This project demonstrates automated testing of an e-commerce web application using Cypress.
 
-The goal is to showcase QA skills including:
-- Test case design
-- Test automation
-- Bug reporting
-- Test execution reporting
+It demonstrates end-to-end test automation using modern best practices, including:
+
+- Page Object Model (POM) design pattern
+- Custom Cypress commands
+- Data-driven testing using fixtures
+- Automated reporting with Allure and Mochawesome
+- CI/CD integration via GitHub Actions
+
+The goal is to showcase expertise in test case design, automation, reporting, and continuous integration.
 
 ---
 
 ## 🛠️ Tech Stack
-- Cypress
-- JavaScript
-- Node.js
+- Cypress – End-to-end testing framework
+- JavaScript – Test scripting language
+- Node.js – Runtime environment
+- Allure & Mochawesome – Test reporting
+- GitHub Actions – CI/CD automation
 
 ---
 
@@ -23,7 +29,7 @@ The goal is to showcase QA skills including:
 cypress/
 ├── e2e/ # Test specs
 ├── fixtures/ # Test data
-├── support/
+├── support/  # Custom commands and reusable utilities
 ├── pageObjects/ # Page Object Model
 test-cases/ # Manual test cases
 test-report/ # Bug reports
@@ -32,15 +38,28 @@ test-report/ # Bug reports
 
 ## ✅ Test Coverage
 
-### ✔ Login
-- Valid login
-- Invalid login
+### ✔ Login Module
 
-### ✔ Inventory
-- Add product to cart
+| Test Case | Description                          | Type     | Status |
+| --------- | ------------------------------------ | -------- | ------ |
+| TC_001    | Valid login with registered user     | Positive | ✅     |
+| TC_002    | Invalid login with wrong credentials | Negative | ❌     |
 
-### ✔ Checkout
-- Complete checkout process
+
+### ✔ Inventory Module
+
+| Test Case | Description               | Type       | Status |
+| --------- | ------------------------- | ---------- | ------ |
+| TC_003    | Add a product to the cart | Functional | ✅     |
+
+
+### ✔ Checkout Module
+
+| Test Case | Description                          | Type       | Status |
+| --------- | ------------------------------------ | ---------- | ------ |
+| TC_004    | Complete checkout with valid details | End-to-End | ✅     |
+| TC_005    | Attempt checkout with empty fields   | Negative   | ❌     |
+
 
 ---
 
@@ -71,19 +90,28 @@ npx cypress run
 
 ## 📊 Test Summary
 
-| Total Tests | Passed | Failed |
+| Total Tests| Passed | Failed |
 |------------|--------|--------|
 | 5          | 4      | 1      |
 
 ---
 
 ## 🚀 Key Features
-- Page Object Model (POM)
-- Data-driven testing using fixtures
-- End-to-end test scenarios
-- Structured QA documentation
+- Page Object Model (POM) – clean, reusable page interactions
+- Custom Cypress Commands – simplifies repetitive actions
+- Data-driven Testing – uses fixtures for test data
+- End-to-End Test Scenarios – login, inventory, checkout flows
+- Automated Reporting – Allure & Mochawesome
+- CI/CD Ready – GitHub Actions workflow with environment secrets
 
 ---
 
+## ⚙️ CI/CD & Reporting Integration
+- Cypress tests are fully integrated into GitHub Actions
+- Secrets for credentials are stored in GitHub repository/environment secrets
+- Allure and Mochawesome reports are generated as artifacts
+- Reports can be downloaded and viewed for test analysis
+- Future enhancement: deploy Allure reports to GitHub Pages for online viewing
+
 ## 👨‍💻 Author
-QA/Test Automation Engineer (Tina Fernandes)
+QA/Test Automation Engineer: Tina Fernandes
