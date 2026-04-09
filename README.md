@@ -24,18 +24,20 @@ The goal is to showcase expertise in test case design, automation, reporting, an
 
 ---
 
-## 📂 Project Structure ✔
+## 📂 Project Structure 
 
-cypress/
-├── e2e/           # Test specifications
-├── fixtures/      # Test data
-├── support/       # Custom commands and reusable utilities
-└── pageObjects/   # Page Object Model classes
+| Folder / File       | Description                                                    |
+| ------------------- | -------------------------------------------------------------- |
+| `cypress/`          | Main Cypress folder containing all test automation code        |
+| ├── `e2e/`          | Test specification files (Cypress tests)                       |
+| ├── `fixtures/`     | Test data files (JSON, CSV, etc.)                              |
+| ├── `support/`      | Custom commands, reusable utilities, and Cypress support files |
+| └── `pageObjects/`  | Page Object Model classes for structured UI interactions       |
+| `test-cases/`       | Manual test case documentation                                 |
+| `test-report/`      | Bug reports and test artifacts (Allure, Mochawesome)           |
+| `cypress.config.js` | Cypress configuration file                                     |
+| `package.json`      | Node.js project configuration and dependencies                 |
 
-test-cases/         # Manual test cases
-test-report/        # Bug reports and test artifacts
-cypress.config.js   # Cypress configuration
-package.json        # Node.js project config
 
 ---
 
