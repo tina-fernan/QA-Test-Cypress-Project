@@ -1,15 +1,21 @@
 import LoginPage from '../support/pageObjects/LoginPage'
 
+
 describe('Login Tests', () => {
 
   it('TC_001 - Login with valid credentials', () => {
-    cy.fixture('users').then(user => {
-    cy.login(user.validUser.username, user.validUser.password)
+    cy.allure().feature('Login')
+    cy.allure().severity('critical')
+    cy.allure().story('Successful order placement')
+    
+    cy.login(
+      Cypress.env('username'),
+      Cypress.env('password')
+    )
 
     cy.url().should('include', '/inventory')
-    cy.get('.inventory_list').should('be.visible')
-      
-    })
+    cy.get('.inventory_list').should('be.visible')    
+    
   })
 
   it('TC_002 - Invalid Login', () => {

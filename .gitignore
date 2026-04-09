@@ -3,11 +3,13 @@ node_modules/
 cypress/videos/
 cypress/screenshots/
 
+allure-results/
+allure-report/
+
 cypress/reports/
 test-report/*.html
 
 .env
-.env.*
 
 .DS_Store
 Thumbs.db

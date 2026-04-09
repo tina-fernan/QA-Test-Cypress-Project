@@ -10,6 +10,8 @@ jobs:
 
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true 
+      CYPRESS_username: ${{ secrets.CYPRESS_username }}
+      CYPRESS_password: ${{ secrets.CYPRESS_password }}
 
     steps:
       - uses: actions/checkout@v4

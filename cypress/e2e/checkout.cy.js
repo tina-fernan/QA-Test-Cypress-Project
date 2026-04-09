@@ -5,12 +5,16 @@ import CheckoutPage from '../support/pageObjects/CheckoutPage'
 describe('Checkout Tests', () => {
 
   beforeEach(() => {
-  cy.fixture('users').then(user => {
-    cy.login(user.validUser.username, user.validUser.password)
-  })
+  cy.login(
+      Cypress.env('username'),
+      Cypress.env('password')
+    )
 })
 
   it('TC_004 - Complete checkout successfully', () => {
+  cy.allure().feature('Checkout')
+  cy.allure().severity('critical')
+  cy.allure().story('Successful order placement')
 
   cy.login('standard_user', 'secret_sauce')
 
