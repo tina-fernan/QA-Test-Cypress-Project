@@ -27,12 +27,15 @@ The goal is to showcase expertise in test case design, automation, reporting, an
 ## 📂 Project Structure
 
 cypress/
-├── e2e/ # Test specs
-├── fixtures/ # Test data
-├── support/  # Custom commands and reusable utilities
-├── pageObjects/ # Page Object Model
-test-cases/ # Manual test cases
-test-report/ # Bug reports
+├── e2e/           # Test specifications
+├── fixtures/      # Test data
+├── support/       # Custom commands and reusable utilities
+└── pageObjects/   # Page Object Model classes
+
+test-cases/         # Manual test cases
+test-report/        # Bug reports and test artifacts
+cypress.config.js   # Cypress configuration
+package.json        # Node.js project config
 
 ---
 
