@@ -1,6 +1,5 @@
 import LoginPage from '../support/pageObjects/LoginPage'
 
-
 describe('Login Tests', () => {
 
   it('TC_001 - Login with valid credentials', () => {

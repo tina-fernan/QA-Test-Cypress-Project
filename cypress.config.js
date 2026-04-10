@@ -1,10 +1,11 @@
 const { defineConfig } = require('cypress')
-require('dotenv').config()
+const dotenvPlugin = require('cypress-dotenv')
 
 module.exports = defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       require('@shelex/cypress-allure-plugin/writer')(on, config)
+      config = dotenvPlugin(config)
       return config
     },
 

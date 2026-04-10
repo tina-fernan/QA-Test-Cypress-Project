@@ -1,4 +1,3 @@
-// import LoginPage from '../support/pageObjects/LoginPage'
 import InventoryPage from '../support/pageObjects/InventoryPage'
 import CheckoutPage from '../support/pageObjects/CheckoutPage'
 

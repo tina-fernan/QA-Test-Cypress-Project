@@ -90,6 +90,10 @@ npx cypress open
 ### Run in headless mode
 npx cypress run
 
+## 📊 Generate Reports
+npm run test:report  
+npm run test:allure
+
 
 ---
 
